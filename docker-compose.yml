@@ -4,7 +4,7 @@ services:
   app:
     image: node:lts
     command: sh -c "npm install && node ."
-    working_dir: /hey
+    working_dir: /backend
     volumes:
       - ./:/backend
       - wordledat-db:/data
