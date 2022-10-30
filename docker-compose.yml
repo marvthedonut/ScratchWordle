@@ -1,0 +1,13 @@
+version: "3.7"
+
+services:
+  app:
+    image: node:lts
+    command: sh -c "npm install && node ."
+    working_dir: /src
+    volumes:
+      - ./:/backend/src
+      - wordledat-db:/data
+
+volumes:
+  wordledat-db:
